@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    tools:background="@color/colorPrimaryDark">
+
+    <TextView
+        android:text="             Minutos             Segundos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text"
+        android:textSize="20sp"
+        android:layout_above="@+id/textSecondsTemp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/textMinutesTemp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="200dp"
+        android:hint="00"
+        android:textSize="60sp"
+        android:textColor="@android:color/holo_green_dark"
+        android:maxLength="2"
+        tools:textColor="@android:color/holo_green_dark" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/textSecondsTemp"
+        android:hint="00"
+        android:textSize="60sp"
+        android:textColor="@android:color/holo_green_dark"
+        android:maxLength="2"
+        android:layout_marginLeft="118dp"
+        android:layout_marginStart="118dp"
+        android:layout_alignLeft="@+id/textMinutesTemp"
+        android:layout_alignStart="@+id/textMinutesTemp"
+        android:layout_alignBottom="@+id/textMinutesTemp"
+        android:layout_alignTop="@+id/textMinutesTemp" />
+
+
+    <Button
+        android:text="Pausar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:id="@+id/botonPausaTemp"
+        android:layout_below="@+id/textSecondsTemp"
+        android:layout_alignLeft="@+id/textMinutesTemp"
+        android:layout_alignStart="@+id/textMinutesTemp" />
+
+    <Button
+        android:text="Cancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:id="@+id/botonCancelarTemp"
+        android:layout_alignBaseline="@+id/botonPausaTemp"
+        android:layout_alignBottom="@+id/botonPausaTemp"
+        android:layout_alignLeft="@+id/textSecondsTemp"
+        android:layout_alignStart="@+id/textSecondsTemp" />
+
+    <TextView
+        android:text="A entrenar!!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textSize="50sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/botonCancelarTemp"
+        android:layout_alignEnd="@+id/botonCancelarTemp"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:id="@+id/nroSets"
+        android:textSize="40sp"
+        android:layout_below="@+id/textView"
+        android:layout_toLeftOf="@+id/botonCancelarTemp"
+        android:layout_toStartOf="@+id/botonCancelarTemp" />
+
+
+</RelativeLayout>
